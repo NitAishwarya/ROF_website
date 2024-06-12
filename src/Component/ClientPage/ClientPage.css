@@ -1,0 +1,17 @@
+.form-input input::placeholder {
+  color: rgba(53, 53, 53, 0.5);
+  font-family: Manrope;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24.59px;
+  letter-spacing: 0.15em;
+  text-align: left;
+}
+
+
+.div-2{
+    background-image: url(../../Images/Vector\ 28.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+}
