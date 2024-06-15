@@ -1,0 +1,118 @@
+.layout1{
+top: 82px;
+left: 522px;
+}
+
+.text{
+    position: relative;
+    width: 478px;
+height: 38px;
+top: -910px;
+left: 32px;
+
+font-family: Americana BT;
+font-size: 32px;
+font-weight: 700;
+line-height: 37.69px;
+text-align: left;
+color: #FFFFFF;
+
+}
+.layout2{
+    position: relative;
+    margin-top: -942px;
+    margin-left: 544px;
+    
+}
+.box{
+    top: 250px;
+    left: 221px;
+    border-radius: 24px;
+   
+}
+.box h1{
+    width: 181px;
+height: 36px;
+margin-top: 24px;
+font-family: Poppins;
+
+font-size: 24px;
+font-weight: 500;
+line-height: 36px;
+text-align: center;
+
+}
+.style{
+    width: 940px;
+    height: 935px;
+    position: relative;
+    margin-left: -90px;
+    margin-top: -30px;
+}
+
+.input input::placeholder{
+padding: 12px 24px 12px 24px;
+
+}
+
+.input input{
+    width: 358px;
+height: 49px;
+/* position: relative; */
+border-radius: 8px;
+border: 1.5px solid rgba(53, 53, 53, 0.5);
+justify-content: space-between;
+border: 1.5px #9b6565 solid ;
+}
+
+.bs button{
+    width: Fixed (140px)px;
+height: Hug (45px)px;
+top: 56px;
+left: 136px;
+padding: 10px 30px 10px 30px;
+gap: 24px;
+border-radius: 8px;
+background-color: #632E04 ;
+justify-content: center;
+color: #FFFFFF;
+
+}
+
+.b1{
+    width: 64px;
+    height: 44px;
+    position: relative;
+    left: 100px;
+    border-radius: 10px;
+    top: -25px;
+}
+.b2{
+    position: relative;
+    top: -69px;
+    left: 65px;
+}
+.b2 span{
+    gap: 10px;
+}
+.input select{
+    width: 358px;
+    height: 49px;
+    padding: 12px 24px 12px 24px;
+    font-size: 18px;
+    border: 1.5px solid rgba(53, 53, 53, 0.5);
+    border-radius: 10px;
+    margin-top: 7px ;
+}
+.label{
+    font-size: 18px;
+    margin-left: -233px;
+}
+.location{
+    width: 358px;
+    height: 49px;
+  border-radius: 10px;
+  margin-top: 7px;
+  font-size: 18px;
+  
+}

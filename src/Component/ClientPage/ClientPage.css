@@ -8,10 +8,224 @@
   text-align: left;
 }
 
+@font-face{
+ 
+    font-family: Americana BT;
+    src: url(../../Images/americanabt_bold.ttf);
 
-.div-2{
-    background-image: url(../../Images/Vector\ 28.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
+  
+}
+
+.stepper-container {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  position: relative;
+  margin-top: -2%;
+
+}
+
+.stepper-container::before {
+  content: '';
+  position: absolute;
+  top: 7.5%;
+  left: 0%;
+  right: 0%;
+  height: 3px;
+  justify-self: center;
+  align-self: center;
+  background-color: #632E04;
+  z-index: 0;
+  width: 85%;
+}
+
+.stepper-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  z-index: 1;
+  /* background-color: blue; */
+}
+
+.stepper-item.active~.stepper-item::before {
+  background-color: #632E04;
+  /* Custom brown color */
+}
+
+.stepper-circle {
+  width: 15px;
+  height: 15px;
+  background-color: #D9D9D9;
+  border: 2px solid #D9D9D9;
+  border-radius: 50%;
+  z-index: 1;
+  transition: background-color 0.3s, border-color 0.3s;
+
+  /* background-color: red; */
+}
+
+.stepper-item.active .stepper-circle {
+  background-color: #632E04;
+  border-color: #632E04;
+}
+
+.stepper-label {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  color: #ccc;
+  transition: color 0.3s;
+  text-align: center;
+}
+
+.stepper-item.active .stepper-label {
+  color: #2D2D2D;
+}
+
+/* .stepper-line {
+  position: absolute;
+  height: 2px;
+  background-color: #ccc;
+  z-index: 0;
+  transition: background-color 0.3s;
+} */
+
+.stepper-line.completed {
+  background-color: #632E04;
+}
+
+.stepper-item:not(:last-child) .stepper-line {
+  width: calc(100% - 20px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.div-2 {
+   background-image: url(../../Images/Vector\ 28.png); 
+   background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x:1px; 
+   background-position-y: center; 
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  .div_comp {
+    height: 886px !important;
+  }
+
+  .hero_comp {
+    height: 970px !important;
+  }
+
+  .details {
+    width: 425px !important;
+    height: 635px !important;
+  }
+
+  .logo1 {
+    width: 64px !important;
+    height: 64px !important;
+  }
+
+  .enrol {
+    width: 385px !important;
+  }
+
+  .textF {
+    font-size: 23px !important;
+  }
+
+  .div-2 {
+    width: 657px !important;
+    /* background-image: url(../../Images/Vector\ 28.png) !important; */
+    /* background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position-x: center !important;
+    background-size: 657px !important; */
+  }
+}
+
+@media screen and (max-width: 786px) and (min-width: 425px) {
+  .div-2 {
+    width: 657px !important;
+    /* background-image: url(../../Images/Vector\ 28.png) !important; 
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position-x: center !important;
+    background-size: 500px !important;  */
+  }
+
+  .main_comp{
+    height: 73px !important;
+  }
+
+  .hero_comp {
+    height: 910px !important;
+  }
+
+  .logo1 {
+    width: 55px !important;
+    height: 55px !important;
+  }
+
+  .enrol {
+    width: 330px !important;
+    /* height: 783px !important; */
+  }
+
+  .div-2 {
+    width: 435px !important;
+  }
+
+  .textF {
+    font-size: 20px !important;
+    position: absolute !important;
+    left: 17px !important;
+  }
+
+  .details {
+    width: 340px !important;
+    height: 600px !important;
+  }
+
+  .details_form {
+    width: 341px !important;
+  }
+
+  .labelT {
+    font-size: 22px !important;
+  }
+
+  .div_add {
+    margin-top: 5px !important;
+  }
+
+  .add {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .div_text {
+    font-size: 16px !important;
+  }
+
+  .div_input {
+    width: 260px !important;
+    height: 18px !important;
+  }
+
+  .input_label {
+    font-size: 16px !important;
+  }
+
+  .form-input {
+    padding: 0px 16px !important;
+  }
+
+  .form-input input::placeholder {
+    font-size: 16px;
+  }
 }

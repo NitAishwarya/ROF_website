@@ -1,0 +1,139 @@
+.form-input input::placeholder {
+    color: rgba(53, 53, 53, 0.5);
+    font-family: Manrope;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24.59px;
+    letter-spacing: 0.15em;
+    text-align: left;
+  }
+  
+  /* .div-2 {
+     background-image: url(../../Images/Vector\ 28.png); 
+     background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center; 
+     background-position-y: center; 
+     background-size: 950px; 
+    
+  } */
+  
+  @media only screen and (max-width: 1024px) and (min-width: 768px) {
+    .div_comp {
+      height: 886px !important;
+    }
+  
+    .hero_comp {
+      height: 970px !important;
+    }
+  
+    .details {
+      width: 425px !important;
+      height: 635px !important;
+    }
+  
+    .logo1 {
+      width: 64px !important;
+      height: 64px !important;
+    }
+  
+    .enrol {
+      width: 385px !important;
+    }
+  
+    .textF {
+      font-size: 23px !important;
+    }
+  
+    .div-2 {
+      width: 657px !important;
+      /* background-image: url(../../Images/Vector\ 28.png) !important; */
+      /* background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background-position-x: center !important;
+      background-size: 657px !important; */
+    }
+  }
+  
+  @media screen and (max-width: 786px) and (min-width: 425px) {
+    .div-2 {
+      width: 657px !important;
+      /* background-image: url(../../Images/Vector\ 28.png) !important; 
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background-position-x: center !important;
+      background-size: 500px !important;  */
+    }
+  
+    .main_comp{
+      height: 73px !important;
+    }
+  
+    .hero_comp {
+      height: 910px !important;
+    }
+  
+    .logo1 {
+      width: 55px !important;
+      height: 55px !important;
+    }
+  
+    .enrol {
+      width: 330px !important;
+      /* height: 783px !important; */
+    }
+  
+    .div-2 {
+      width: 435px !important;
+    }
+  
+    .textF {
+      font-size: 20px !important;
+      position: absolute !important;
+      left: 17px !important;
+    }
+  
+    .details {
+      width: 340px !important;
+      height: 600px !important;
+    }
+  
+    .details_form {
+      width: 341px !important;
+    }
+  
+    .labelT {
+      font-size: 22px !important;
+    }
+  
+    .div_add {
+      margin-top: 5px !important;
+    }
+  
+    .add {
+      width: 100px !important;
+      height: 100px !important;
+    }
+  
+    .div_text {
+      font-size: 16px !important;
+    }
+  
+    .div_input {
+      width: 260px !important;
+      height: 18px !important;
+    }
+  
+    .input_label {
+      font-size: 16px !important;
+    }
+  
+    .form-input {
+      padding: 0px 16px !important;
+    }
+  
+    .form-input input::placeholder {
+      font-size: 16px;
+    }
+  }
+  

@@ -1,13 +1,30 @@
 import './App.css';
-import ClientPG from './Component/ClientPG/ClientPG';
-import ClientPage from './Component/ClientPage/ClientPage';
-import LoginPage from './Component/Login/LoginPage';
+import ForgotPassword from './Component/LoginPage/ForgotPassword';
+import Home from './Component/LoginPage/Home';
+import LoginPage from './Component/LoginPage/LoginPage';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Routest from './Component/Routess/Routes';
+import MultiStepForm from './Component/Stepper/MultiStepForm';
+
+
 
 function App() {
   return (
-          <div style={{ textAlign: " -webkit-center" }}>
-          <ClientPG />
-          </div>
+        
+      //         <BrowserRouter>
+      //   <Routes>
+  
+      //     <Route path="/" element={<LoginPage />} />
+      //     <Route path="/home" element={<Home />} />
+      //     <Route path="/ForgotPassword" element={<ForgotPassword/>} />
+  
+      //   </Routes>
+      // </BrowserRouter>
+
+       <Routest/>
+
+      // <MultiStepForm/>
+        
   );
 }
 

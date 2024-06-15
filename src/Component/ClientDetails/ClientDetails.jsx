@@ -1,13 +1,27 @@
-import rof from "../../Images/image 1.png";
-import enroll from "../../Images/Rectangle 3.png";
 import add from "../../Images/Frame 1000015306.png";
 
+import { useRef, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
+import "./ClientDetails.css";
 
-import { useRef, useState } from "react";
+const steps = [
+  "Client Details",
+  "Project Interest",
+  "Budget",
+  "Additional Requirements & Notes",
+  "Assign Lead",
+  "Preview",
+];
 
-const LoginPage = () => {
+const ClientDetails = () =>{
+
+  const [currentStep, setCurrentStep] = useState(0);
+
+  const nextStep = () =>
+    setCurrentStep((prev) => Math.min(prev + 1, steps.length - 1));
+
+    
 
     const imgref = useRef(null);
     const [image, setImage] = useState("");
@@ -25,87 +39,35 @@ const LoginPage = () => {
       console.log(file);
       setImage(file);
     };
-  
+
     const submitForm = (e) => {
-      e.preventDefault();
-      const formSub = {Image,FullName, MobNo, EmailId };
-  
-      console.log(formSub);
-    };
-  return (
-    <div >
-      {/* <ClientPage/> */}
+        e.preventDefault();
+        const formSub = {Image,FullName, MobNo, EmailId };
+    
+        console.log(formSub);
+      };
+    return(
+        <div>
 
-      <div
-        style={{ width: "1200px", height: "650px", border: "3px solid red" }}
-      >
-        {/* ROF image */}
-        <div style={{textAlign:'justify'}}>
-          <img
-            src={rof}
-            style={{
-              margin: "8px 90px",
-            }}
-          />
-        </div>
-
-        <div style={{ display: "flex" }}>
-          <>
-            {/* //Enrollment */}
-            <>
-              <text
-                style={{
-                  position: "absolute",
-                  top: "124px",
-                  left: "32px",
-                  gap: "0px",
-                  opacity: "0px",
-                  fontFamily: "Castoro Titling",
-                  fontSize: "32px",
-                  fontWeight: "600",
-                  lineHeight: "37.69px",
-                  textAlign: "left",
-                  color: "rgba(255, 255, 255, 1)",
-                }}
-              >
-                {" "}
-                CLIENT INFORMATION FORM{" "}
-              </text>
-            </>
-            <img src={enroll} />
-          </>
-
-          <div style={{ width: "100%" }} className="div-2">
-            {/* progress bar */}
-            <div
-              style={{
-                height: "74px",
-                padding: "20px 75px",
-              }}
-            >
-              progess
-            </div>
-
-            {/* client details */}
-            <div style={{ textAlign: "-webkit-center" }}>
-              <div
+<div style={{ textAlign: "-webkit-center"}}>
+              {/* <div className="details"
                 style={{
                   width: "500px",
                   height: "650px",
                   border: "3px solid #632E04",
                   borderRadius: "24px",
                 }}
-              >
+              > */}
                 <div
+                className="details_form"
                   style={{
                     width: "358px",
-                    height: "578px",
-                    marginTop: "24px",
+                    height: "545px",
                     gap: "24px",
                   }}
                 >
                   <div>
-                    <label
+                    <label className="labelT"
                       style={{
                         fontSize: "24px",
                         fontWeight: "500",
@@ -118,10 +80,10 @@ const LoginPage = () => {
                       Client Details{" "}
                     </label>
                   </div>
-                  <div style={{ marginTop: "17px 0" }}>
-                    <div onClick={handleAddImage}>
+                  <div style={{ marginTop: "17px 0", cursor:'pointer' }}>
+                    <div onClick={handleAddImage} className="div_add">
                       {image ? (
-                        <img
+                        <img className="add"
                           src={URL.createObjectURL(image)}
                           accept="Image/"
                           width="120px"
@@ -129,18 +91,20 @@ const LoginPage = () => {
                           style={{ borderRadius: "50%" }}
                         />
                       ) : (
-                        <img src={add} />
+                        <img src={add} className="add" />
                       )}
                       <input
                         style={{ display: "none" }}
                         onChange={handleChangeImage}
                         type="file"
                         ref={imgref}
+
+                        required
                        
                       />
                     </div>{" "}
                     <>
-                      <text
+                      <text className="div_text"
                         style={{
                           fontFamily: "Manrope",
                           fontSize: "18px",
@@ -152,6 +116,7 @@ const LoginPage = () => {
                         }}
                       >
                         Click to add photo{" "}
+                        
                       </text>
                     </>
                   </div>
@@ -159,11 +124,13 @@ const LoginPage = () => {
                   {/* FORM */}
                   <div className="form-input">
                     <form
-                      onSubmit={submitForm}
+                    autoComplete="OFF"
+                      // onSubmit={submitForm}
                       method="POST"
                       style={{ gap: "10px", textAlign: "justify" }}
                     >
                       <label
+                      className="input_label"
                         style={{
                           fontFamily: "Manrope",
                           fontSize: "18px",
@@ -177,7 +144,7 @@ const LoginPage = () => {
                         Full Name*{" "}
                       </label>
                       <br />
-                      <input
+                      <input className="div_input"
                         type="text"
                         name="name"
                         value={FullName}
@@ -201,6 +168,7 @@ const LoginPage = () => {
                       <br />
                       <br />
                       <label
+                      className="input_label"
                         style={{
                           fontFamily: "Manrope",
                           fontSize: "18px",
@@ -208,6 +176,7 @@ const LoginPage = () => {
                           lineHeight: "24.59px",
                           textAlign: "left",
                           color: "rgba(45, 45, 45, 1)",
+                          
                         }}
                       >
                         {" "}
@@ -215,6 +184,7 @@ const LoginPage = () => {
                       </label>
                       <br />
                       <input
+                      className="div_input"
                         type="text"
                         name="mobNo"
                         value={MobNo}
@@ -240,6 +210,7 @@ const LoginPage = () => {
                       <br />
                       <br />
                       <label
+                      className="input_label"
                         style={{
                           fontFamily: "Manrope",
                           fontSize: "18px",
@@ -254,6 +225,7 @@ const LoginPage = () => {
                       </label>
                       <br />
                       <input
+                      className="div_input"
                         type="email"
                         name="email"
                         required
@@ -277,14 +249,16 @@ const LoginPage = () => {
 
                       <br />
                       <br />
-                      <div style={{ textAlign: "center" }}>
+                      {/* <div style={{ textAlign: "center" }}>
                         <input
-                          type="submit"
+                        onClick={nextStep}
+                          type="button"
                           value="Next"
                           style={{
                             width: "140px",
                             height: "45px",
                             padding: "10px 40px 10px 40px",
+                            fontSize:'18px',
                             textAlign: "start",
                             gap: "24px",
                             borderRadius: "8px",
@@ -302,20 +276,19 @@ const LoginPage = () => {
                             left: "-60px",
                             color: "rgba(255, 255, 255, 1)",
                             fontWeight: "400",
-                            fontSize: "14px",
+                            fontSize: "18px",
                           }}
                         />{" "}
-                      </div>
+                      </div> */}
                     </form>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+            {/* </div> */}
 
-export default LoginPage;
+        </div>
+    )
+}
+
+
+export default ClientDetails;
